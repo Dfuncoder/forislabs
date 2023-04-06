@@ -20,11 +20,6 @@ Route::get('/test', function (Request $request) {
 
 
 
-Route::prefix('login')->name('login.')->group( function (){
-    Route::post('/facebook', [facebookController::class, 'loginUsingfacebook'])->name('facebook'); 
-    Route::post('/facebook', [facebookController::class, 'callbackFromfacebook'])->name('callback'); 
-});
-
 
 Route::prefix('login')->name('login.')->group( function (){
     Route::post('/google', [ApiController::class, 'googleloginApi'])->name('google')->middleware('auth:api');
