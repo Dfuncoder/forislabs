@@ -14,15 +14,6 @@ use App\Http\Controllers\ApiController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('/test', function (Request $request) {
-    return 'Aunthenticated';
-});
-
-
-
-
-
-
 Route::prefix('login')->name('login.')->group( function (){
     Route::post('/google', [ApiController::class, 'googleloginApi'])->name('google')->middleware('auth:api');
     Route::post('/facebook', [ApiController::class, 'facebookloginApi'])->name('facebook')->middleware('auth:api'); 
