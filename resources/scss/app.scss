@@ -1,0 +1,52 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+[x-cloak] {
+  display: none !important;
+}
+
+.post-body,
+.ck-editor {
+  padding-top: 0.5rem !important;
+  ul {
+    list-style: initial;
+    display: list-item;
+    @apply py-2 pl-4;
+  }
+  ol {
+    list-style: decimal;
+    display: list-item;
+    padding-left: 1rem;
+  }
+  p {
+    padding-bottom: 0.2rem;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+  h2 {
+    @apply text-2xl font-bold;
+  }
+  h3 {
+    @apply text-[1.17rem] font-bold;
+  }
+  h4 {
+    @apply text-base font-bold;
+  }
+  h5 {
+    @apply text-sm font-bold;
+  }
+  h5 {
+    @apply text-xs font-bold;
+  }
+}
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
